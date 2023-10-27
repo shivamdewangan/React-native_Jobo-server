@@ -13,6 +13,11 @@ const jobRouter=require('./routes/jobRoutes')
 
 const app=express()
 
+const cors = require('cors');
+app.use(cors({
+    origin: '*'
+}));
+
 if(process.env.NODE_ENV==='development'){
     app.use(morgan('dev'))
 }
